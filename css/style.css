@@ -7,15 +7,20 @@
 	height: 50px;
 }
 body {
-	/* background-color: black; */
+	background-color: white;
 }
 .container {
 	max-width: 955px;
-	background-color: red;
+	background-color: rgb(54, 50, 50);
 	margin: auto;
 	height: 60vh;
+	padding: 30px;
+	overflow-y: scroll;
+	margin-bottom: 23px;
 }
 .message {
+	color: white;
+	background-color: gray;
 	width: 24%;
 	padding: 10px;
 	margin: 17px 12px;
@@ -27,6 +32,26 @@ body {
 	clear: both;
 }
 .right {
+	background-color: green;
 	float: right;
 	clear: both;
+}
+#send-container {
+	display: block;
+	margin: auto;
+	text-align: center;
+	max-width: 985px;
+	width: 100%;
+}
+#messageInp {
+	width: 90%;
+	border: 2px solid black;
+	border-radius: 6px;
+	height: 34px;
+}
+.btn {
+	cursor: pointer;
+	border: 2px solid black;
+	border-radius: 6px;
+	height: 34px;
 }
