@@ -9,7 +9,7 @@ const users = {};
 
 io.on('connection', (socket) => {
 	socket.on('new-user-joined', (name) => {
-		console.log('new user', name);
+		// console.log('new user', name);
 		users[socket.id] = name;
 		socket.broadcast.emit('user-joined', name);
 	});
@@ -18,5 +18,9 @@ io.on('connection', (socket) => {
 			message: message,
 			name: users[socket.id],
 		});
+	});
+	socket.on('disconnect', (message) => {
+		socket.broadcast.emit('left', users[socket.id]);
+		delete users[socket.id];
 	});
 });
